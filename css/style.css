@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+#main-body{
+    background-color:hsl(210, 46%, 95%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    width: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.child-one{
+    max-width: 100%;
+}
+.child-one img{
+    width: 100%;
+    height: 100%;
+}
+.child-two{
+    background-color: #fff;
+    padding: 30px;
+}
+.content-one{
+    color: hsl(217, 19%, 35%);
+    font-size: 30px;
+    font-weight: 700;
+}
+.content-two{
+    color: hsl(212, 23%, 69%);
+    margin: 20px 0px;
+}
+.content-three{
+    display: flex;
+    justify-content: space-between;
+}
+.content-three-child-one{
+    display: flex;
+    align-items: center;
+
+}
+.content-three-child-one > .sub-child-one {
+    margin-right: 10px;
+}
+.content-three-child-one > .sub-child-one  > img{
+    width: 50px;
+    border-radius: 100%;
+}
+.sub-child-two h1{
+    font-size: 15px;
+    color: hsl(217, 19%, 35%);
+}
+.sub-child-two h4{
+    font-size: 12px;
+    color:  hsl(212, 23%, 69%);
+}
+
+.content-three-child-two{
+    position: relative;
+}
+.tooltip-text{
+    visibility: hidden;
+    width: 180px;
+    background-color: hsl(217, 19%, 35%);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 5px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+.fas{
+    background-color: hsl(210, 46%, 95%);
+    padding: 10px;
+    border-radius: 100%;
+    color:  hsl(217, 19%, 35%);
+    cursor: pointer;
+}
+.tooltip-text span{
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+.fab{
+    margin: 0 6px;
+}
+.content-three-child-two:hover .tooltip-text{
+    visibility: visible;
+}
+.mob-view{
+    display: none;
+}
+.content-three-child-two:hover .fas{
+    color:  hsl(210, 46%, 95%);
+    background-color: hsl(217, 19%, 35%);
+}
+@media(max-width: 768px){
+    .container{
+        width: 80%;
+    }
+}
+@media(max-width: 375px){
+    .container{
+        flex-direction: column;
+        width: 80%;
+    }
+    .content-one{
+        font-size: 18px;
+    }
+    .content-two{
+        font-size: 15px;
+    }
+    .sub-child-two h1{
+        font-size: 12px;
+    }
+    .content-three-child-one > .sub-child-one  > img{
+        width: 30px;
+    }
+    .fas{
+        padding: 10px;
+        font-size: 10px;
+    }
+    .content-three-child-two:hover .sub-child-one{
+        visibility: hidden;
+    }
+    .content-three-child-two:hover .content-three{
+        background-color: red;
+    }
+}
